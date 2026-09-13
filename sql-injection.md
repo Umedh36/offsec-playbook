@@ -337,7 +337,7 @@ Finally, in some cases, we may not have direct access to the output whatsoever, 
 
 \*\*Important points
 
-&#x20;`In order to use (#) as a comment within a browser, we can use '%23', which is an URL encoded (#) symbol. Because # is used as a tag in browser`
+`In order to use (#) as a comment within a browser, we can use '%23', which is an URL encoded (#) symbol. Because # is used as a tag in browser`
 
 **Union injection**
 
@@ -367,11 +367,11 @@ The other method is to attempt a Union injection with a different number of colu
 cn' UNION select 1,2,3,4-- -
 ```
 
-\*\*Location of Injection
+Location of Injection
 
 While a query may return multiple columns, the web application may only display some of them. So, if we inject our query in a column that is not printed on the page, we will not get its output. This is why we need to determine which columns are printed to the page, to determine where to place our injection. In the previous example, while the injected query returned 1, 2, 3, and 4, we saw only 2, 3, and 4 displayed back to us on the page as the output data:
 
-!\[\[Pasted image 20260329235802.png]]
+
 
 ```
 ' UNION select 1,@@version,3,4-- -
@@ -379,7 +379,7 @@ While a query may return multiple columns, the web application may only display 
 
 in here we are trying the column 2 is display means in the column it show the version
 
-!\[\[Pasted image 20260329235818.png]]
+
 
 **Database Enumeration**
 
@@ -441,7 +441,7 @@ To be able to write files to the back-end server using a MySQL database, we requ
 2. MySQL global `secure_file_priv` variable not enabled
 3. Write access to the location we want to write to on the back-end server
 
-using the `SELECT .. INTO OUTFILE` statement. The `INTO OUTFILE`  statement can be used to write data from select queries into files. This is usually used for exporting data from tables
+using the `SELECT .. INTO OUTFILE` statement. The `INTO OUTFILE` statement can be used to write data from select queries into files. This is usually used for exporting data from tables
 
 ```
 SELECT variable_name, variable_value FROM information_schema.global_variables where variable_name="secure_file_priv"
@@ -463,7 +463,6 @@ Writing file with union class
 cn' union select 1,'file written successfully!',3,4 into outfile '/var/www/html/proof.txt'-- -
 ```
 
-!\[\[Pasted image 20260330021126.png]]
+
 
 _If we have the permission to write we can write the web shell and connect through it_
-

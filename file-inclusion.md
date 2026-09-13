@@ -309,11 +309,7 @@ Every time you visit a website, the server logs your request in an `access.log` 
 | **Nginx Log**    | User-Agent / URL       | `/var/log/nginx/access.log`   | Usually readable by `www-data`.   |
 | **SSH Log**      | Login Username         | `/var/log/auth.log`           | Often restricted to root/adm.     |
 
-!\[\[Pasted image 20260415014437.png|463]]
 
-!\[\[Pasted image 20260415014504.png|477]]
-
-!\[\[Pasted image 20260415014529.png|484]]
 
 | **Attack Type**           | **Target File Path (Linux / Windows)**                                                                          | **Poisoning Vector (How to Inject)**                                                                        | **Exploitation Step**                                                       |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |

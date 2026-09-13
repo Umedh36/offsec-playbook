@@ -28,7 +28,7 @@ MAC Address: DE:AD:00:00:BE:EF
 Nmap done: 1 IP address (1 host up) scanned in 0.03 seconds
 ```
 
-Pasted image 20250418192353.png
+
 
 ```shell-session
 sudo nmap 10.129.2.18 -sn -oA host -PE --packet-trace 
@@ -41,8 +41,6 @@ Host is up (0.023s latency).
 MAC Address: DE:AD:00:00:BE:EF
 Nmap done: 1 IP address (1 host up) scanned in 0.05 seconds
 ```
-
-Pasted image 20250418192512.png \*\*\*ABOUT THE PORTS Pasted image 20250418192603.png
 
 ```shell-session
 sudo nmap 10.129.2.28 --top-ports=10 
@@ -85,7 +83,7 @@ MAC Address: DE:AD:00:00:BE:EF (Intel Corporate)
 Nmap done: 1 IP address (1 host up) scanned in 0.07 seconds
 ```
 
-Pasted image 20250418193208.png _**when a port got the filter these are the reasons**_ -> When a port is shown as filtered, it can have several reasons. In most cases, firewalls have certain rules set to handle specific connections. The packets can either be `dropped`, or `rejected`. When a packet gets dropped, `Nmap` receives no response from our target, and by default --disable-arp-ping => disables the arp ping -Pn => disable ICMP Echo request -sU => perform udp scan --reason => gives the reason for the output --packet-trace => we can trace the packet _**SAVING THE RESULTS**_ We can also specify the option (`-oA`) to save the results in all formats. The command could look like this
+_**when a port got the filter these are the reasons**_ -> When a port is shown as filtered, it can have several reasons. In most cases, firewalls have certain rules set to handle specific connections. The packets can either be `dropped`, or `rejected`. When a packet gets dropped, `Nmap` receives no response from our target, and by default --disable-arp-ping => disables the arp ping -Pn => disable ICMP Echo request -sU => perform udp scan --reason => gives the reason for the output --packet-trace => we can trace the packet _**SAVING THE RESULTS**_ We can also specify the option (`-oA`) to save the results in all formats. The command could look like this
 
 * Normal output (`-oN`) with the `.nmap` file extension
 * Grepable output (`-oG`) with the `.gnmap` file extension
@@ -182,7 +180,7 @@ _**Suppose i want a HTML output**_ With the XML output, we can easily create HTM
 xsltproc target.xml -o target.html
 ```
 
-it can create the HTML page by using the .xml file . The output look like this Pasted image 20250418195615.png
+it can create the HTML page by using the .xml file .&#x20;
 
 _**SERVICE ENUMERATION**_ -sV => for version scan -v => Increases the verbosity of the scan, which displays more detailed information. --status-every=5s => it status for the every 5 seconds
 
@@ -289,7 +287,7 @@ PORT   STATE SERVICE VERSION
 <SNIP>
 ```
 
-Pasted image 20250418200615.png -sC => it uses for the default scripts
+&#x20;-sC => it uses for the default scripts
 
 ```shell-session
 sudo nmap 10.129.2.0/24 -F --initial-rtt-timeout 50ms --max-rtt-timeout 100ms
@@ -298,7 +296,7 @@ sudo nmap 10.129.2.0/24 -F --initial-rtt-timeout 50ms --max-rtt-timeout 100ms
 Nmap done: 256 IP addresses (8 hosts up) scanned in 12.29 seconds
 ```
 
-Pasted image 20250418200924.png
+
 
 ```shell-session
 sudo nmap 10.129.2.0/24 -F | grep "/tcp" | wc -l
