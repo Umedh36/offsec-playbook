@@ -1,6 +1,6 @@
 # Foot Printing
 
-\*\*\*\* ### 1. Certificate Transparency (crt.sh) Tracking
+&#x20;1\. Certificate Transparency (crt.sh) Tracking
 
 **Command:**
 
