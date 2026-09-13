@@ -2,7 +2,7 @@
 
 ## offsec-playbook
 
-* [NMAP](NMAP.md)
+* [NMAP](README.md)
 * [Foot Printing](foot-printing.md)
 * [File Transfers](file-transfers.md)
 * [Shells And Payloads](shells-and-payloads.md)

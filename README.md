@@ -315,8 +315,6 @@ sudo nmap 10.129.2.0/24 -F | grep "/tcp" | wc -l
 Nmap done: 256 IP addresses (10 hosts up) scanned in 8.67 seconds
 ```
 
-Pasted image 20250418201138.png
-
 ### Timing
 
 Because such settings cannot always be optimized manually, as in a black-box penetration test, `Nmap` offers six different timing templates (`-T <0-5>`) for us to use. These values (`0-5`) determine the aggressiveness of our scans. This can also have negative effects if the scan is too aggressive, and security systems may block us due to the produced network traffic. The default timing template used when we have defined nothing else is the normal (`-T 3`).
@@ -328,12 +326,9 @@ Because such settings cannot always be optimized manually, as in a black-box pen
 * `-T 4` / `-T aggressive`
 * `-T 5` / `-T insane`
 
-Pasted image 20250418201320.png
-
 ```shell-session
 sudo nmap 10.129.2.0/24 -F -oN tnet.T5 -T 5
 
 <SNIP>
 Nmap done: 256 IP addresses (10 hosts up) scanned in 18.07 seconds
 ```
-
