@@ -1,5 +1,7 @@
 # Table of contents
 
+* [README](README.md)
+
 ## offsec-playbook
 
 * [NMAP](NMAP.md)
